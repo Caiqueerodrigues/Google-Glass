@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+ul#album-fotos {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+    list-style: none;
+}
+
+ul#album-fotos li:hover { /*este hover irá modificar TODOS os LI, o que está mais pra baixo modifica cad LI deuma vez*/
+    -webkit-transform: scale(1.5); /*usado para dar zoom nas imagens do album*/
+}
+
+ul#album-fotos li {
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 5px solid white;
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    -webkit-transition: all .3s ease-in; /*transição para o wfeito de zoom de cima, EASI-IN é o tipo de feito escolhido para a transição*/
+}
+
+ul#album-fotos li span {
+    opacity: 0;
+    color: white;
+    box-shadow: 1px 1px 1px black;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 9pt;
+    line-height: 500px;
+    padding: 5px;
+    margin-left: 5px;
+}
+ul#album-fotos li:hover span { /*faz com que o SPAN aparaça somente quando passado o mouse por cima*/
+    opacity: 1;
+}
+
+ul#album-fotos li#foto01 {
+    background: url('../_imagens/galeria-01.jpg') no-repeat;
+    background-position: 50% 50%; /*mostrará o MEIO da foto em miniatura*/
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul#album-fotos li#foto01:hover {
+    background-position: 0px 0px;
+    background-size: 300px 300px;
+}
+
+ul#album-fotos li#foto02 {
+    background: url('../_imagens/galeria-02.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul#album-fotos li#foto02:hover {
+    background-position: 0px 0px;
+    background-size: 300px 300px;
+}
+
+ul#album-fotos li#foto03 {
+    background: url('../_imagens/galeria-03.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul#album-fotos li#foto03:hover {
+    background-position:0px 0px;
+    background-size: 300px 300px;
+}
+
+ul#album-fotos li#foto04 {
+    background: url('../_imagens/galeria-04.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul#album-fotos li#foto04:hover {
+    background-position: 0px 0px;
+    background-size: 300px 300px;
+}
+
+ul#album-fotos li#foto05 {
+    background: url('../_imagens/galeria-05.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul#album-fotos li#foto05:hover {
+    background-position: 0px 0px;
+    background-size: 300px 300px;
+}
+
+ul#album-fotos li#foto06 {
+    background: url('../_imagens/galeria-06.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul#album-fotos li#foto06:hover {
+    background-position: 0px 0px;
+    background-size: 300px 300px;
+}

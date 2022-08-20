@@ -1,0 +1,230 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+@font-face {
+    font-family:'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+    }
+
+body {
+    font-family: arial , sans-serif;/*SERIFA é aqueles traços para trás das letras*/
+    background-color: #dddddd; 
+    color: black    
+}
+    body a {
+    color: blue;
+    text-decoration: none;
+    }
+    a:hover{
+    color: red;
+    background-color: rgb(182, 182, 182);
+    }
+
+div#interface{
+    width: 1200px; /*tamanho de tudo*/
+    background-color: white;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+ 
+p {
+    text-align: justify; 
+    text-indent: 50px;
+}
+
+/*Formatação do Header ou CABEÇALHO*/
+header#cabecalho img#icone {
+    position: absolute; /*posição do oculos na tela principal*/
+    left: 1050px;
+    top: 70px ;
+}
+header#cabecalho{
+    border-bottom: 1px #606060 solid; /*cria uma uma linha divisória*/
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 90px; /*este comando serve
+    para usar uma imgaem como BACKGROUND, nao oferencendo a opção de salvar imagem*/
+}
+header#cabecalho h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;/*TAMANHO DA FONTE*/
+    color: grey;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    padding: 0px; /*margens*/
+    margin-bottom: 0px; /*margem especifica de BAIXO*/
+}
+header#cabecalho h2{
+    font-family: 'Titillium Web', sans-serif;
+    color: #000000;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px; /*margem especifica de CIMA*/
+}
+
+/*Formatação de imagens COM LEGENDAS*/
+figure.foto-legenda {
+    position: relative;
+    border: 10px solid white; /* bodas expessura e cor*/
+    box-shadow: 1px 1px 4px black; /* quadro de sombra*/
+}
+figure.foto-legenda img {
+    width: 100%; /* bordas em todo o espaço da foto*/
+    height: 100%;
+}
+figure.foto-legenda figcaption { /* legenda da foto*/
+    color: white;
+    position: absolute;
+    top: 0px;/* posição*/
+    background-color:rgba(0, 0, 0, 0.4); /* background da legenda*/
+    width: 100%;
+    height: 100%;
+    padding: 10px;/* espaço da borda para comecar o escrito*/
+    box-sizing: border-box; /* para o fundo do escrito pegar a foto toda*/
+    opacity: 0; /* transparencia do conjunto*/
+    transition: opacity 1s; /*transição demorará !segundo para aparecer a legenda*/
+}
+figure.foto-legenda:hover figcaption {/* comando de HOVER, funciona para 
+    mudar opacidade do escrito somente quando o mouse em cima*/
+    opacity: 1;
+}
+
+/* Formatação do Menu*/
+nav#menu{
+    display: block;
+}
+nav#menu h1{ 
+    display:  none;/*este comando esconde um escrito na tela, mas continua no codigo*/
+} 
+nav#menu ul {
+    list-style: none;/*comando para esconder os pontos ou numeros das listas*/
+    text-transform: uppercase;/*este deixa todas as letras em maiusculo*/
+    position: absolute;/*leva todo "container" para o topo da tela*/
+    top: -20px;/*proximidade do escrito ao inicio da tela em cima*/
+    left: 600px; /*proximidade do escrito ao lado direito da tela*/
+
+}  
+nav#menu li{
+    display: inline-block;/*deixa o menu em linha e não em coluna*/
+    background-color: rgb(177, 177, 177);
+    padding: 10px;/* espaço da borda para comecar o escrito*/
+    margin: 2px;/*largura da margem*/
+    transition: background-color 1s;
+}
+            /* hover mostra sombra quando passado o mouse no local*/
+nav#menu a{ /* tudo que tem A, é ancora para link entao sera formatado aqui*/
+    color: black;
+    text-decoration: none; /* este serve para tirar o sublinhado*/
+}
+nav#menu a:hover {/* HOVER serve para sempre que o mouse estiver em cima de algo, algo mudar*/
+    color: white; /* serve para mudar a cor do escrito com o mouse em cima*/
+}
+
+/*FORMATAÇÃO DO CORPO CENTRAL DA TELA*/
+section#corpo {
+    display: block;    /*para ser mostrada como um bloco*/
+    width: 735px;
+    float: left;
+    border-right: 1px solid black;
+    padding: 15px;
+}
+article#noticia-principal h2 {
+    font-size: 12pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 10px 0px 10px 10px;
+    margin: 10px;
+}
+header#cabecalho-artigo h1 {
+    font-family: 'FonteLogo' , sans-serif;
+    font-size: 20pt;
+    color: 606060;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin-top: 0px;
+}
+header#cabecalho-artigo h3 {
+    font-size: 11px;
+    color: #606060;
+    
+}
+.direita {
+    text-align: right;
+}
+
+table#espec {
+    border: 1px solid #606060;
+    border-spacing: 0px;/* este comando serve para tirar os espacos entre os TD*/
+    margin-left: auto;
+    margin-right: auto;
+}
+table#espec td {
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+}
+table#espec td.ce { /*para especificar classe usa o .*/
+    color: white;
+    background-color: #606060;
+    vertical-align: top;
+}
+table#espec td.cd {
+    background-color: #cecece;
+    font-weight: bold;
+    text-align: left;
+}
+table#espec caption{
+    color: #888888;
+    font-size: 16pt;
+    font-weight: bolder;
+}
+table#espec caption span{
+    display: block;/*torna  o span, ou qualquer item, algo separado do restante*/
+    float: right;/*flutuação do item*/
+    color: black;
+    font-size: 10pt;
+    margin-top: 10px;    
+}
+
+/*FORMATAÇÃO DA LATERAL*/
+aside#lateral {
+    display: block;
+    width: 400px;
+    float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.7);
+}
+aside#lateral h1 {
+    font-family: 'FonteLogo' , sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: white;
+    padding: 5px;
+}
+/*FORMATAÇÃO DO RODAPÉ*/
+footer#rodape {
+    clear:both;
+    border-top: 1px solid black;
+}
+footer#rodape p {
+    text-align: center;
+}
+footer#rodape a{
+    color: black;
+    text-decoration: none;
+}
+footer#rodape a:hover{
+    color: blue;
+    background-color: rgb(177, 177, 177);
+}

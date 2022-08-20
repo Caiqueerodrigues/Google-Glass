@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+div#tv-radio {
+    width: 1100px;/* altura*/
+    height: 700px;/* largura*/
+    margin: auto;/* centralizar*/
+    background: url("../_imagens/radio-tv.png") no-repeat;
+}
+
+audio#musica {
+    display: block;/*para ser exibido como um BLOCO*/
+    position: relative;
+    left: 573px;
+    top: 486px;
+    width: 300px;
+}
+
+video#filme { /* essas configs de video servem tambem para o INCORPORAR do youtube ou qualquer fonte externa de mídia*/
+    display: block;
+    position: relative;
+    left: 85px;
+    top: 70px;
+    width: 440px;
+}
