@@ -6,7 +6,7 @@
     }
 
 body {
-    font-family: arial , sans-serif;/*SERIFA é aqueles traços para trás das letras*/
+    font-family: arial , sans-serif;
     background-color: #dddddd; 
     color: black    
 }
@@ -20,7 +20,7 @@ body {
     }
 
 div#interface{
-    width: 1200px; /*tamanho de tudo*/
+    width: 1200px; 
     background-color: white;
     margin: -20px auto 0px auto;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
@@ -34,56 +34,54 @@ p {
 
 /*Formatação do Header ou CABEÇALHO*/
 header#cabecalho img#icone {
-    position: absolute; /*posição do oculos na tela principal*/
+    position: absolute;
     left: 1050px;
     top: 70px ;
 }
 header#cabecalho{
-    border-bottom: 1px #606060 solid; /*cria uma uma linha divisória*/
+    border-bottom: 1px #606060 solid;
     height: 150px;
-    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 90px; /*este comando serve
-    para usar uma imgaem como BACKGROUND, nao oferencendo a opção de salvar imagem*/
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 90px;
 }
 header#cabecalho h1{
     font-family: 'FonteLogo', sans-serif;
-    font-size: 30pt;/*TAMANHO DA FONTE*/
+    font-size: 30pt;
     color: grey;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-    padding: 0px; /*margens*/
-    margin-bottom: 0px; /*margem especifica de BAIXO*/
+    padding: 0px; 
+    margin-bottom: 0px;
 }
 header#cabecalho h2{
     font-family: 'Titillium Web', sans-serif;
     color: #000000;
     font-size: 15pt;
     padding: 0px;
-    margin-top: 0px; /*margem especifica de CIMA*/
+    margin-top: 0px; 
 }
 
 /*Formatação de imagens COM LEGENDAS*/
 figure.foto-legenda {
     position: relative;
-    border: 10px solid white; /* bodas expessura e cor*/
-    box-shadow: 1px 1px 4px black; /* quadro de sombra*/
+    border: 10px solid white; 
+    box-shadow: 1px 1px 4px black; 
 }
 figure.foto-legenda img {
-    width: 100%; /* bordas em todo o espaço da foto*/
+    width: 100%; 
     height: 100%;
 }
-figure.foto-legenda figcaption { /* legenda da foto*/
+figure.foto-legenda figcaption { 
     color: white;
     position: absolute;
-    top: 0px;/* posição*/
-    background-color:rgba(0, 0, 0, 0.4); /* background da legenda*/
+    top: 0px;
+    background-color:rgba(0, 0, 0, 0.4); 
     width: 100%;
     height: 100%;
-    padding: 10px;/* espaço da borda para comecar o escrito*/
-    box-sizing: border-box; /* para o fundo do escrito pegar a foto toda*/
-    opacity: 0; /* transparencia do conjunto*/
-    transition: opacity 1s; /*transição demorará !segundo para aparecer a legenda*/
+    padding: 10px;
+    box-sizing: border-box; 
+    opacity: 0; 
+    transition: opacity 1s;
 }
-figure.foto-legenda:hover figcaption {/* comando de HOVER, funciona para 
-    mudar opacidade do escrito somente quando o mouse em cima*/
+figure.foto-legenda:hover figcaption {
     opacity: 1;
 }
 
@@ -92,35 +90,35 @@ nav#menu{
     display: block;
 }
 nav#menu h1{ 
-    display:  none;/*este comando esconde um escrito na tela, mas continua no codigo*/
+    display:  none;
 } 
 nav#menu ul {
-    list-style: none;/*comando para esconder os pontos ou numeros das listas*/
-    text-transform: uppercase;/*este deixa todas as letras em maiusculo*/
-    position: absolute;/*leva todo "container" para o topo da tela*/
-    top: -20px;/*proximidade do escrito ao inicio da tela em cima*/
-    left: 600px; /*proximidade do escrito ao lado direito da tela*/
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 600px;
 
 }  
 nav#menu li{
-    display: inline-block;/*deixa o menu em linha e não em coluna*/
+    display: inline-block;
     background-color: rgb(177, 177, 177);
-    padding: 10px;/* espaço da borda para comecar o escrito*/
-    margin: 2px;/*largura da margem*/
+    padding: 10px;
+    margin: 2px;
     transition: background-color 1s;
 }
-            /* hover mostra sombra quando passado o mouse no local*/
-nav#menu a{ /* tudo que tem A, é ancora para link entao sera formatado aqui*/
+            
+nav#menu a{ 
     color: black;
-    text-decoration: none; /* este serve para tirar o sublinhado*/
+    text-decoration: none;
 }
-nav#menu a:hover {/* HOVER serve para sempre que o mouse estiver em cima de algo, algo mudar*/
-    color: white; /* serve para mudar a cor do escrito com o mouse em cima*/
+nav#menu a:hover {
+    color: white; 
 }
 
 /*FORMATAÇÃO DO CORPO CENTRAL DA TELA*/
 section#corpo {
-    display: block;    /*para ser mostrada como um bloco*/
+    display: block;
     width: 735px;
     float: left;
     border-right: 1px solid black;
@@ -158,7 +156,7 @@ header#cabecalho-artigo h3 {
 
 table#espec {
     border: 1px solid #606060;
-    border-spacing: 0px;/* este comando serve para tirar os espacos entre os TD*/
+    border-spacing: 0px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -167,7 +165,7 @@ table#espec td {
     padding: 10px;
     text-align: center;
 }
-table#espec td.ce { /*para especificar classe usa o .*/
+table#espec td.ce {
     color: white;
     background-color: #606060;
     vertical-align: top;
@@ -183,8 +181,8 @@ table#espec caption{
     font-weight: bolder;
 }
 table#espec caption span{
-    display: block;/*torna  o span, ou qualquer item, algo separado do restante*/
-    float: right;/*flutuação do item*/
+    display: block;
+    float: right;
     color: black;
     font-size: 10pt;
     margin-top: 10px;    
