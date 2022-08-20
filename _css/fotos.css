@@ -8,8 +8,8 @@ ul#album-fotos {
     list-style: none;
 }
 
-ul#album-fotos li:hover { /*este hover irá modificar TODOS os LI, o que está mais pra baixo modifica cad LI deuma vez*/
-    -webkit-transform: scale(1.5); /*usado para dar zoom nas imagens do album*/
+ul#album-fotos li:hover { 
+    -webkit-transform: scale(1.5); 
 }
 
 ul#album-fotos li {
@@ -20,7 +20,7 @@ ul#album-fotos li {
     border: 5px solid white;
     background-color: white;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    -webkit-transition: all .3s ease-in; /*transição para o wfeito de zoom de cima, EASI-IN é o tipo de feito escolhido para a transição*/
+    -webkit-transition: all .3s ease-in;
 }
 
 ul#album-fotos li span {
@@ -33,13 +33,13 @@ ul#album-fotos li span {
     padding: 5px;
     margin-left: 5px;
 }
-ul#album-fotos li:hover span { /*faz com que o SPAN aparaça somente quando passado o mouse por cima*/
+ul#album-fotos li:hover span { 
     opacity: 1;
 }
 
 ul#album-fotos li#foto01 {
     background: url('../_imagens/galeria-01.jpg') no-repeat;
-    background-position: 50% 50%; /*mostrará o MEIO da foto em miniatura*/
+    background-position: 50% 50%; 
     background-size: 400px 400px;
     background-color: white;
 }
