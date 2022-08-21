@@ -31,7 +31,7 @@
                 <nav id="menu">
                     <h1>Menu Principal</h1>
                     <ul type="square">    
-                        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li> <!--listas numeradas--> 
+                        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li> 
                         <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
                         <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/Contato.png')"><a href="fotos.html">Fotos</a></li>
                         <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/Contato.png')"><a href="multimidia.html">Multimídia</a></li>
@@ -53,23 +53,15 @@
                 </article>
             </section>
 
-        <form method="post" id="f-contato" action="mailto:caiquerodriguesalmeida@gmail.com" oninput="calc_total()";><!--Formulários--><!--metodo GET= + rápido -seguro, ideal para pesquisa POST= + seguro + lento ideal para dados de login etc-->
-                <!--MAILTO: serve para envviar o formulário direto para o EMAIL, porém esta em desuso, melhor em PHP-->
-                <!--ONIINPUT = serve para assim que algo for digitado diparar alguma "reação"-->
-
-            <fieldset id="usuario"><legend>Identificação do Usuário</legend><!--LEGEND coloca o T'ITULO em evidencia-->
-                    <!--FIELDSET é conjunto de CAMPOS-->
-                    <!--FIELDSET circula o LEGEND-->
-                <p><label for="c-nome">Nome:</label><input type="text" name=t-nome id=c-nome size="35" maxlength="40"/ placeholder="Nome Completo"></p><!--INPUT 'e usado para abrir caixa de texto.Por regra deve conter, NAME e ID'-->
-                    <!--SIZE= tamanho MAXLENGTH= maximo de caracteres PLACEHOLDER= dica do que vai na caixa-->
+        <form method="post" id="f-contato" action="mailto:caiquerodriguesalmeida@gmail.com" oninput="calc_total()";>
+             
+             <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+                <p><label for="c-nome">Nome:</label><input type="text" name=t-nome id=c-nome size="35" maxlength="40"/ placeholder="Nome Completo"></p>
                 <p><label for="c-senha">Senha:</label><input type="password" name="t-senha" id="c-senha" size="10" maxlength="16" placeholder="8 a 16 Caracteres"></p>
                 <p><label for="c-email">E-mail:</label><input type="email" name="t-email" id="c-email" size="20" maxlength="40" placeholder="Exemplo@exemplo.com.br"></p>
                 <fieldset id="sexo"><legend>Sexo:</legend>
                 <input type="radio" name="t-sexo" id="c-masc" checked><label for="c-masc">Masculino</label></br>
                 <input type="radio" name="t-sexo" id="c-fem"><label for="c-fem">Feminino</label>
-                    <!--LABEL FOR= é para referenciar o escrito ao ID, para não ter que clicar exatamente em cima da "bolinha"-->
-                    <!--CHECKED dentro do INPUT RADIO fará com que a caixa fique marcada inicialmente-->
-                    <!--Dois objetos no mesmo campo de RADIO, devem conter o mesmo NAME, caso contr'ario ele deixar'a marcar ambos-->
                 </fieldset>
                 <p><label for="c-nasc">Data de Nascimento:</label><input type="date" name="t-nasc" id="c-nasc"></p>
             </fieldset>
@@ -77,12 +69,11 @@
             <fieldset id="endereco"><legend>Endereço do Usuário</legend>
                 <p><label for="c-rua">Logradouro:</label><input type="text" name="t-rua" id="c-rua" size="25" maxlength="30" placeholder="Rua, Travessa, Avenida..."></p>
                 <p><label for="c-num">Número:</label><input type="number" name="t-num" id="c-num" min="0" max="9999"></p>
-                    <!--INPUT NUMBER usa-se o MIN e MAX para estipular numeros que podem ser usados e já tambem a qtd de caracteres-->
                 <p><label for="c-est">Estado:</label>
-                    <select name=t-est id="c-est"><!--insere CAIXAS DE SELEÇÃO-->
-                        <optgroup label="regiao-sudeste"><!--GRUPO DE OPÇÕES-->
-                            <option value="SP" selected>São Paulo</option> <!--SELECTED torna a opção padrão já pré selecionada-->
-                            <option value="RJ">Rio de Janeiro</option><!--VALUE é o que será enviado no formulário-->
+                    <select name=t-est id="c-est">
+                        <optgroup label="regiao-sudeste">
+                            <option value="SP" selected>São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
                             <option value="MG">Minas Gerais</option>
                         <optgroup>
                         <optgroup label="regiao-sul">
@@ -93,8 +84,7 @@
                     </select>
                 </p>
                 <p><label for="c-cid">Cidade:<input type="text" name="t-cid" id="c-cid" size="25" maxlength="35" placeholder="Sua Cidade" list="cidades"></label></p>
-                    <!--LIST dentro do INPUT é para fazer ligação enre DATALIST e a caixa de texto-->
-                    <datalist id="cidades"> <!--Funionará como sugestões mas náo limitadas a somentes estas-->
+                    <datalist id="cidades">
                         <option value="Birigui"></option>
                         <option value="Araçatuba"></option>
                         <option value="São José do Rio Preto"></option>
@@ -105,13 +95,10 @@
             <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
                 <p><label for="c-urg">Grau de Urgência:</label>
                     Min<input type="range" name="t-urg" id="c-urg" min="0" max="10" step="2">Max
-                        <!--INPUT RANGE é uma barra de selecção, com MIN e MAX, STEP serve para selecionar o tamanho do PULO.-->
                 </p>
 
                 <p><label for="c-msg">Mensagem:</label>
                     	<textarea name="t-msg" id="c-msg" cols="45" rows="10" placeholder="Deixe Aqui Sua Mensagem"></textarea>
-                            <!--TEXTAREA serve para caixas de texto maiores-->
-                                <!--Cols = LARGURA e Rows = ALTURA-->
                 </p>
             </fieldset>
 
@@ -121,7 +108,6 @@
                 <p><label for="c-qtd">Quantidade:<input type="number" name="t-qtd" id="c-qtd" min="1" max="5"></label></p>
                 <p><label for="c-tot">Preço Total: R$ 
                     <input type="text" name="t-tot" id="c-tot" placeholder="Total a pagar" size="9" maxlength="9" readonly></p>
-                    <!--READONLY é para somente leitura da caixa de texto, para que o usuário nao consiga editar-->
             </fieldset>
 
             <input type="image" src="_imagens/botao-enviar.png" name="t-env" id="c-env">
